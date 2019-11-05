@@ -66,12 +66,12 @@ var sketch = function(p) {
 }
 var p = new p5(sketch);
 
-//f*ck rain
+//emoji rain
 function newFck() {
   this.x = p.random(p.width);
   this.y = p.random(-500, -50);
   this.z = p.random(-5, 20);
-  this.len = p.map(this.z, 0, 20, 10, 20);
+  this.par = p.map(this.z, 0, 20, 10, 20);
   this.yspeed = p.map(this.z, 0, 20, 1, 20);
   this.val = valore;
 
@@ -81,13 +81,13 @@ function newFck() {
     this.yspeed = this.yspeed + grav;
 
     if (this.y > p.height) {
-      this.y = p.random(-200, -100);
+      this.y = p.random(0, -100);
       this.yspeed = p.map(this.z, 0, 20, 4, 10);
     }
   }
 
   this.show = function() {
-    p.image(fck, this.x, this.y, valore + this.len, valore*2.5 + this.len)
+    p.image(fck, this.x, this.y, valore + this.par, valore*2.5 + this.par) //emoji creation
   }
 }
 
