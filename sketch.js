@@ -39,6 +39,7 @@ var sketch = function(p) {
     var slider = p.createSlider(1, 16, 10); //slider cor changing size of emoji
         slider.position(p.windowWidth/2-62, p.windowHeight/13*11.5);
         valore = slider.value();
+        p.createP("move the slider to change the sizes of the emoji")
 
   }
 
