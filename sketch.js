@@ -23,7 +23,7 @@ var sketch = function(p) {
 
   p.setup = function() {
     cnv = p.createCanvas(700, 500);
-    cnv.position(p.windowWidth / 2 - 350, p.windowHeight / 2 - 250)
+    cnv.position(p.windowWidth / 2 - 350, p.windowHeight / 2 - 250)   //canvas in exact middel of screen
     arr = [p.ARROW, p.CROSS, p.HAND, p.MOVE, p.TEXT, p.WAIT];
     for (var i = 0; i < num; i++) {
       drops[i] = new newFck();
@@ -32,11 +32,11 @@ var sketch = function(p) {
     var button = p.createButton('randomize the emoji');
         button.position(p.windowWidth/2-60, p.windowHeight/12*10);
         button.mouseClicked(function() {
-          var emoji = [cl, hi, up, fck];
+          var emoji = [cl, hi, up, fck];    //random emoji function on click
             fck = p.random(emoji);
         });
 
-    var slider = p.createSlider(1, 16, 10);
+    var slider = p.createSlider(1, 16, 10); //slider cor changing size of emoji
         slider.position(p.windowWidth/2-62, p.windowHeight/13*11.5);
         valore = slider.value();
 
@@ -50,13 +50,13 @@ var sketch = function(p) {
     //random cursor
     c++;
     p.cursor(arr[c]);
-    if (c >= arr.length) {
+    if (c >= arr.length) {  //cursor get mad on canvas
       c = 0;
     }
     //nike in centro allo schermo
-    p.image(nk, p.windowWidth / 4 - 210, p.windowHeight / 4 - 67, 420, 115)
+    p.image(nk, p.windowWidth / 4 - 210, p.windowHeight / 4 - 67, 420, 115)   //nike in middle of canvas
 
-    for (var i = 0; i < drops.length; i++) {
+    for (var i = 0; i < drops.length; i++) {  //function emoji falling
       drops[i].fall();
       drops[i].show();
     }
