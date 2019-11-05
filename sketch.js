@@ -40,8 +40,9 @@ var sketch = function(p) {
         slider.position(p.windowWidth/2-62, p.windowHeight/13*11.5);
         valore = slider.value();
 
-    var par = p.createP("move the slider to change the sizes of the emoji"); //paragraph with instruction for the slider 
+    var par = p.createP("move the slider to change the sizes of the emoji"); //paragraph with instruction for the slider
         par.position(p.windowWidth/2-62, p.windowHeight/13*12);
+        p.mode(CENTER)
 
   }
 
