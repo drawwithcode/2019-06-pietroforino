@@ -1,13 +1,59 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
-    <style> body {padding: 0; margin: 0;} </style>
-    <script src="p5.min.js"></script>
-    <!-- <script src="addons/p5.sound.min.js"></script> -->
-    <script src="sketch.js"></script>
-  </head>
-  <body>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      background: tomato;
+      font-family: 'Space Mono', monospace;
+    }
+
+    h1,h2,p {
+      color: white;
+    }
+
+    h2:hover {
+      color: yellow;
+      transition: 0.3s;
+    }
+    button {
+      background-color: tomato;
+      color: white;
+      border: 3px;
+      border-style: solid;
+      border-radius: 5px;
+      border-color: white;
+      padding: 5px;
+    }
+    button:hover {
+      color: yellow;
+      border-color: yellow;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+  </style>
+  <script src="p5.min.js"></script>
+  <script src="addons/p5.dom.min.js"></script>
+  <script src="addons/p5.sound.min.js"></script>
+  <!-- <script src="addons/p5.sound.min.js"></script> -->
+  <script src="sketch.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="spazio">
+  </div>
+
+  <div id="cont" style="padding-left:282px">
+    <h1>tribute to the great Pablo Rochat</h1>
+    <a href="http://www.pablorochat.com" style="text-decoration:none;"><h2 id="sito">pablorochat.com</h2></a>
+    <p>project for Nike Running - rivisited</p>
+  </div>
+
+</body>
+
 </html>
